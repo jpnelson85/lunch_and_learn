@@ -2,7 +2,6 @@ class CountryService
 
   def conn 
     Faraday.new(url: 'https://restcountries.com/v3.1/') do |f|
-      
     end
   end
 
@@ -15,8 +14,8 @@ class CountryService
     get_url('all')
   end
 
-  def get_country_by_name(name)
-    get_url("name/#{name}")
+  def get_country_by_name(country_name)
+    get_url("name/#{country_name}")
   end
 
 end

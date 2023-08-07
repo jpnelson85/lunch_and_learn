@@ -1,12 +1,9 @@
 class Api::V1::RecipesController < ApplicationController
 
   def index
-    country = params[:country]
-    country ||= fetch_random_country_name if country.blank?
-
-    recipes = fetch_recipes(country)
-
-    render json: { data: recipes }
+    country = CountryFacade.get_country_by_name(params[:country])
+    recipes = RecipeFacade.new.get_recipes(country)
+    render json: RecipeSerializer.new(recipes)
   end
 
   private
