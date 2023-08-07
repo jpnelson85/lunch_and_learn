@@ -1,0 +1,3 @@
+class AirQualityFacade
+  
+end

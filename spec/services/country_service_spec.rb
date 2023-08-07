@@ -21,4 +21,11 @@ RSpec.describe CountryService do
     expect(country[0][:name][:common]).to be_a(String)
     expect(country[0][:name][:common]).to eq('Brazil')
   end
+
+  it 'returns capital by searching country name', :vcr do
+    capital = CountryService.new.get_capital_by_country_name('Brazil')
+
+    expect(capital[0]).to have_key(:capital)
+    expect(capital[0][:capital]).to be_a(Array)
+  end
 end
