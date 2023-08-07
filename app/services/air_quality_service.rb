@@ -7,8 +7,8 @@ class AirQualityService
     end
   end
 
-  def get_air_quality_data(city)
-    response = conn.get("v1/airquality?city=#{city}")
+  def get_air_quality_data(city_name)
+    response = conn.get("v1/airquality?city=#{city_name}")
     JSON.parse(response.body, symbolize_names: true)
   end
 end

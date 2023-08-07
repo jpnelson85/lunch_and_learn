@@ -7,4 +7,6 @@ class Api::V1::AirQualityController < ApplicationController
 
   private
 
+  
+
 end

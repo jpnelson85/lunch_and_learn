@@ -1,5 +1,5 @@
 class CountrySerializer
 include JSONAPI::Serializer
-attributes
+attributes :capital
 
 end
