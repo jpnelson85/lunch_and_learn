@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe CountryService docs
+RSpec.describe CountryService do
   it 'returns a list of countries', :vcr do
     countries = CountryService.get_countries
 

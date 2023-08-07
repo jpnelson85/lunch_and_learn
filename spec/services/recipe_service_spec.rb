@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe RecipeService do
   it 'returns a list of recipes', :vcr do
-    recipes = RecipeService.get_recipes('Brazil')
+    recipes = RecipeService.new.get_recipes('Brazil')
 
     expect(recipes).to have_key(:hits)
     expect(recipes[:hits]).to be_an(Array)
