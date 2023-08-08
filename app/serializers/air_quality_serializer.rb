@@ -1,4 +1,0 @@
-class AirQualitySerializer
-include JSONAPI::Serializer
-attributes
-end
